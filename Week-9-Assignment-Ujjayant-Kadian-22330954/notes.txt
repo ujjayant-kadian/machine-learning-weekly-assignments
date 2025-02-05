@@ -1,0 +1,384 @@
+Training Dataset Analysis:
+Character-level vocabulary size: 40
+Total number of characters in the dataset: 246982
+Word-level Vocabulary size: 88
+Total number of words: 55076
+Dataset's sample content
+Night night All done
+Night night I see bird
+What is that Help me please
+No mine I climb
+I sing I wash hands
+No mine No touch
+I found it Uh oh spill
+Go park I want cookie
+I want cookie Look moon
+I wash hands I climb
+More more Yummy apple
+All done No like it
+Mama I want play with big red ball outside Yummy apple
+No nap Read book
+More bubbles I sing
+I see bird I see doggy
+All gone Go park
+I dance Big truck
+I jump high I want more juice please
+I climb No stop
+Look moon I see doggy
+More more I want m
+------------------------
+
+Test Dataset Analysis:
+Character-level vocabulary size: 40
+Total number of characters in the dataset: 246982
+Word-level Vocabulary size: 88
+Total number of words: 5347
+Dataset's sample content
+Look airplane I want cookie
+I love you I found it
+I see doggy No touch
+I tired Night night
+Yummy apple Night night
+Night night No stop
+Shoes on My teddy
+I see bird Where kitty go
+I run fast No mine
+I jump I hungry
+I did it I see bird
+More bubbles What is that
+I did it No stop
+I tired No mine
+My teddy I want more juice please
+More more Big truck
+What is that Where ball
+I wash hands I jump
+More more Look airplane
+No touch I want that
+Daddy play I tired
+Where kitty go I make mess
+Where ball I hide
+
+------------------------
+
+Shakespeare Dataset Analysis:
+Character-level vocabulary size: 65
+Total number of characters in the dataset: 246982
+Word-level Vocabulary size: 25670
+Total number of words: 202651
+Dataset's sample content
+First Citizen:
+Before we proceed any further, hear me speak.
+
+All:
+Speak, speak.
+
+First Citizen:
+You are all resolved rather to die than to famish?
+
+All:
+Resolved. resolved.
+
+First Citizen:
+First, you know Caius Marcius is chief enemy to the people.
+
+All:
+We know't, we know't.
+
+First Citizen:
+Let us kill him, and we'll have corn at our own price.
+Is't a verdict?
+
+All:
+No more talking on't; let it be done: away, away!
+
+Second Citizen:
+One word, good citizens.
+
+First Citizen:
+We are accounted poor
+-------------------
+1. 
+# hyperparameters
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 256 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 128
+n_head = 4
+n_layer = 3
+dropout = 0.2
+# ------------
+
+Output:
+0.643393 M parameters
+step 0: train loss 4.2026, val loss 4.2037
+step 500: train loss 0.3656, val loss 0.3689
+step 1000: train loss 0.3445, val loss 0.3485
+step 1500: train loss 0.3372, val loss 0.3406
+step 1999: train loss 0.3335, val loss 0.3370
+
+y jump high I want more juice please
+I hungry I see dogy
+I draw I sing
+Where kitty go What is that
+Daddy read me dinosaur book before bed Mama I want play with big red ball outside
+I did it ired Shoes on
+Daddy play Bath time
+My teddy Where ball
+Come here All gone
+Go park I Shunes w
+Sadon
+I hide I sido
+Yummmy appple I want cookie
+Whe it co s s thade
+Big truck No to Noumik
+I das I ridr idh igh
+I d s man cese Uha o Daddy pllay
+My teate I d h llovie I drunT f t w
+Ala b d b flast Core he helll
+No sto
+
+Child Speech Test Loss: 0.3437
+Shakespeare Test Loss: 7.2445
+Dummy Baseline Loss: 4.1744
+
+2.
+# hyperparameters
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 256 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 192
+n_head = 4
+n_layer = 2
+dropout = 0.2
+# ------------
+
+Output:
+0.963137 M parameters
+step 0: train loss 4.2605, val loss 4.2600
+step 500: train loss 0.3540, val loss 0.3569
+step 1000: train loss 0.3387, val loss 0.3429
+step 1500: train loss 0.3339, val loss 0.3386
+step 1999: train loss 0.3310, val loss 0.3378
+Model saved to best_model.pth
+
+Daddy play Read book
+More more Look moon I want that
+I want more juice please Shoes on
+I want cookie Saw big flufy doggy at park it run fast
+Bath time Daddy read me dinosaur book before bed
+Big truck I run fast
+Yummy apple I wash hands
+Night night Shoes on
+Uha oh spill Whus igr No nap
+Look main res d s cllimb
+Big hug
+I want coookie I jump high
+I want co meakine
+Sheho oes o w
+Look mok Alone I wanthant
+Los as awaw Sas big fluffy doggy at pame please
+I was h hands No nap
+I found it I si
+I hungry fo
+Child Speech Test Loss: 0.3427
+Shakespeare Test Loss: 7.0932
+Dummy Baseline Loss: 4.1744
+
+3.
+# hyperparameters
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 128 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 128
+n_head = 2
+n_layer = 4
+dropout = 0.2
+# ------------
+------------------------
+Output:
+0.824897 M parameters
+step 0: train loss 4.1357, val loss 4.1355
+step 500: train loss 0.3778, val loss 0.3800
+step 1000: train loss 0.3568, val loss 0.3595
+step 1500: train loss 0.3489, val loss 0.3506
+step 1999: train loss 0.3464, val loss 0.3490
+Model saved to best_model.pth
+
+No touch I jid raw
+Big truck All gone
+I draw I run found it
+I jump high I love you
+More more Go park
+Come here I see bird
+More more bes I want cookie
+Come here Yummo Look minosaur bed
+All done I climb
+I sing I seeee doggy
+I want that I hide
+I jump high More bubbles
+I hungry I sing
+No like it Bath truck
+Come here Mama I want play with big red ball outside
+Shoes on I draw
+I jump Uh oh spill
+I found it I see bird
+Saw big fluffy doggy at park it run fast
+Look airplane I jump high
+I draw Where kitty
+Child Speech Test Loss: 0.3545
+Shakespeare Test Loss: 7.0026
+Dummy Baseline Loss: 4.1744
+---------------
+With Bias:
+1. 
+# hyperparameters
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 256 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 128
+n_head = 4
+n_layer = 3
+dropout = 0.2
+# ------------
+
+Output:
+0.644545 M parameters
+step 0: train loss 4.1956, val loss 4.1957
+step 500: train loss 0.3641, val loss 0.3675
+step 1000: train loss 0.3403, val loss 0.3439
+step 1500: train loss 0.3373, val loss 0.3408
+step 1999: train loss 0.3311, val loss 0.3356
+Model saved to best_model.pth
+
+y tirplane What is that
+More bubbles I hungry
+I see doggy I draw
+I jump high I jump high
+Bath time Dadddy read me dinosaur book before bed
+Uh oh spill Look airp
+Look airplane I want that
+Help me please I love you
+I see bird I jump high
+No nap Read boook before bed
+No nap I dance
+I sing What is that
+More bubbles Where kittty go
+I jump What is that
+I hide Night night
+Look moon I see doggy
+I want cookie I hunds
+More bubbles I sing
+I tired Night night
+I sing I climb
+I want cookie Daddy play
+Daddy pl
+Child Speech Test Loss: 0.3413
+Shakespeare Test Loss: 6.9239
+Dummy Baseline Loss: 4.1744
+
+
+2.
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 256 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 192
+n_head = 4
+n_layer = 2
+dropout = 0.2
+# ------------
+Output:
+0.964289 M parameters
+step 0: train loss 4.2066, val loss 4.2066
+step 500: train loss 0.3533, val loss 0.3563
+step 1000: train loss 0.3382, val loss 0.3420
+step 1500: train loss 0.3329, val loss 0.3376
+step 1999: train loss 0.3294, val loss 0.3356
+Model saved to best_model.pth
+
+Daddy play Read book
+More more Look moon
+I want that I love you
+I found it All done
+I found it I draw
+S big flufy doggy at park it run fast I love you
+Daddy read me dinosaur book before bed Big truck
+I run fast I found it Daddy read me dinosaur book before bed
+Where ball Shoes on
+Alane What is that
+Help me please I hungry
+I did it Come here
+All done Shoes on
+Read book Shoes on
+All done Mama I want play with big red ball outside
+I sing More bubbbbles
+Bath time What is that
+I make mess I hing
+I ti
+Child Speech Test Loss: 0.3411
+Shakespeare Test Loss: 7.1127
+Dummy Baseline Loss: 4.1744
+
+3.
+batch_size = 64 # how many independent sequences will we process in parallel?
+block_size = 128 # what is the maximum context length for predictions?
+max_iters = 2000
+eval_interval = 500
+learning_rate = 3e-4
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+eval_iters = 200
+n_embd = 128
+n_head = 2
+n_layer = 4
+dropout = 0.2
+# ------------
+
+Output:
+0.826433 M parameters
+step 0: train loss 4.1990, val loss 4.1997
+step 500: train loss 0.3822, val loss 0.3856
+step 1000: train loss 0.3538, val loss 0.3563
+step 1500: train loss 0.3488, val loss 0.3511
+step 1999: train loss 0.3468, val loss 0.3497
+Model saved to best_model.pth
+
+No touch I jump Daddy read me dinosaur book before bed
+Uh oh spill More more
+I jump Look airplane
+Look moon Loook moon
+Uh oh spill  No stop
+I jump I sing
+No nap Mama I want play with big red ball outside
+Mama I want play with big red ball outside Daddy play
+Shoes on I love you
+I draw I wash hands
+Go park Uh oh spill
+All gone No touch
+All done Where ball
+Daddy play I see doggy
+Night night My teddy
+Daddy play Come here
+Daddy read me dinosaur book before bed Big hug
+Daddy read me dinosaur book befo
+Child Speech Test Loss: 0.3554
+Shakespeare Test Loss: 7.0744
+Dummy Baseline Loss: 4.1744
