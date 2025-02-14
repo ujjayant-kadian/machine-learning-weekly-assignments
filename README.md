@@ -44,7 +44,7 @@ In Week 3, I worked on **Lasso Regression** and **Ridge Regression** with a 3D s
 - 📈 **Lasso and Ridge Models:** Trained both models with different regularization strengths and compared their performance.  
 - 📊 **Cross-Validation:** Used 5-fold cross-validation to evaluate models and plotted prediction error versus regularization strength (`C`).  
 
-📂 [View Week 3 Assignment](./Week-3-Assignment-Ujjayant-Kadian-22330954/week3.ipynb)
+📂 [View Week 3 Assignment](./Week-3-Assignment-Ujjayant-Kadian-22330954/week-3.ipynb)
 
 ---
 
