@@ -28,8 +28,8 @@ This project implements a **GPT-style character-level language model** using **P
 ### 1️⃣ **Clone the Repository**
 Make sure you have Git installed. Run:
 ```bash
-git clone https://github.com/yourusername/gpt-language-model.git
-cd gpt-language-model
+git clone [https://github.com/yourusername/gpt-language-model.git](https://github.com/ujjayant-kadian/machine-learning-weekly-assignments.git)
+cd Week-9-Assignment-Ujjayant-Kadian-22330954
 ```
 
 ### 2️⃣ **Install Dependencies**
